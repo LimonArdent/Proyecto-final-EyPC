@@ -78,8 +78,8 @@ def agregarSimbolo(simbolo):
 def buscarEtiqueta(simbolo):
     global tablaSimbolos
     if simbolo not in tablaSimbolos.keys():
-        tablaSimbolos[simbolo] = f'__{simbolo}__'
-    return tablaSimbolos[simbolo]
+        return None
+    return f'{tablaSimbolos[simbolo][2:]}{tablaSimbolos[simbolo][:2]}'
 
 def macroEnsamble(archivo):
     global tablaMacros, traduccion
